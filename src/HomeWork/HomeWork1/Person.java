@@ -1,10 +1,10 @@
 package HomeWork.HomeWork1;
 
 public class Person {
-    String name;
-    int age;
-    double height;
-    double weight;
+   private String name;
+     private  int age;
+  private   double height;
+    private double weight;
     private int money;
     // kogda stavim privat to mojem ispolizovati peremenoi toliko v etom klasse
 

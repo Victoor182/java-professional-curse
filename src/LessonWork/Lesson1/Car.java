@@ -8,6 +8,47 @@ public class Car {
 
     int currentSpeed;
 
+    private int cost ;
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+
+    public String getModel() {
+        return model;
+    }
+
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public void setCurrentSpeed(int currentSpeed) {
+        if (currentSpeed >= 0 && currentSpeed < 500 ) {
+            this.currentSpeed = currentSpeed;
+        }else
+            System.out.println("speed was no chenge ");
+
+    }
+
+
     public Car(int id, String model, String color, int currentSpeed) {
         this.id = id;
         this.model = model;
@@ -35,6 +76,9 @@ public class Car {
         }
         currentSpeed = speed ;
 
+    }
+    public void reuction(int a){
+        int b = cost - cost * a /100;
     }
 
 }

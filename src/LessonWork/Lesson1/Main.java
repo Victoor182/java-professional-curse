@@ -1,5 +1,7 @@
 package LessonWork.Lesson1;
 
+import LessonWork.Lesson2.Cabriolet;
+
 public class Main {
     public static void main(String[] args) {
         Car a = new Car(1,"BMW F34","Black",0);
@@ -26,6 +28,9 @@ public class Main {
         b.drift();
         a.info();
         b.info();
-        a.go(25);
+        a.go(25 );
+
+        Car car = new Car (1,"BMW","blue",0);
+        Cabriolet cabriolet = new Cabriolet(1,"bmw","black",0,true);
     }
 }
