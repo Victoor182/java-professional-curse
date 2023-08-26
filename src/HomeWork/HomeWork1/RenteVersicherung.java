@@ -6,11 +6,11 @@ public class RenteVersicherung {
     private int dateCreate ;
     private int numberClients ;
 
-    public String getHansaMerkur() {
+    public String getNameFond() {
         return NameFond;
     }
 
-    public void setHansaMerkur(String NameFond) {
+    public void setNameFond(String NameFond) {
         NameFond = NameFond;
     }
 
