@@ -1,17 +1,17 @@
 package HomeWork.HomeWork1;
 
 public class RenteVersicherung {
-    private String HansaMerkur;
+    private String NameFond;
     private final boolean itsgoverny = false;
     private int dateCreate ;
     private int numberClients ;
 
     public String getHansaMerkur() {
-        return HansaMerkur;
+        return NameFond;
     }
 
-    public void setHansaMerkur(String hansaMerkur) {
-        HansaMerkur = hansaMerkur;
+    public void setHansaMerkur(String NameFond) {
+        NameFond = NameFond;
     }
 
     public boolean isItsgoverny() {
