@@ -35,6 +35,6 @@ public class RenteVersicherung {
             System.out.println("This Fond use: " + numberClients/1000+"Clients");
 
         }else
-            System.out.println("This fond are use: " +numberClients);
+            System.out.println("This fond are use: " + numberClients);
     }
 }
