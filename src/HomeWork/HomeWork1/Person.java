@@ -1,12 +1,13 @@
 package HomeWork.HomeWork1;
 
 public class Person {
-   private String name;
-     private  int age;
-  private   double height;
+    private String name;
+    private int age;
+    private double height;
     private double weight;
     private int money;
     // kogda stavim privat to mojem ispolizovati peremenoi toliko v etom klasse
+
 
     public String getName() {
         return name;
@@ -46,28 +47,32 @@ public class Person {
         this.height = height;
         this.weight = weight;
     }
+
     public Person(int money) {
         this.money = money;
 
     }
-    public Person(){
+
+    public Person() {
 
     }
-    public void SchowInfo (){
+
+    public void SchowInfo() {
         System.out.println("Name: " + name);
-        System.out.println("Age: " +age + "years");
+        System.out.println("Age: " + age + "years");
         System.out.println("Height: " + height + "M");
         System.out.println("Weight: " + weight + "KG");
     }
+
     public void GoWork() {
-        if (age < 18 || age > 70 ) {
+        if (age < 18 || age > 70) {
             System.out.println("Stay Home");
-        }else {
+        } else {
             System.out.println("Go work ");
         }
     }
 
-    public void die(){
+    public void die() {
         System.out.println("Person are Dead");
     }
 

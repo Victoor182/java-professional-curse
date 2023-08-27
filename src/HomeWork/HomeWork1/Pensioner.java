@@ -1,7 +1,8 @@
 package HomeWork.HomeWork1;
 
-public class Pensioner extends Person{
-private double pension;
+public class Pensioner extends Person {
+    private double pension;
+
 
     @Override
     public void die() {

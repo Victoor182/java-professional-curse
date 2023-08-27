@@ -1,13 +1,14 @@
 package HomeWork.HomeWork1;
 
-public class RenteVersicherung {
-    private String NameFond;
+public class PensionFond {
+    private String namefond;
     private final boolean itsgoverny = false;
-    private int dateCreate ;
-    private int numberClients ;
+    private int dateCreate;
+    private int numberClients;
+
 
     public String getNameFond() {
-        return NameFond;
+        return namefond;
     }
 
     public void setNameFond(String NameFond) {
@@ -30,11 +31,12 @@ public class RenteVersicherung {
     public void setNumberClients(int numberClients) {
         this.numberClients = numberClients;
     }
+
     public void info() {
         if (!itsgoverny) {
-            System.out.println("This Fond use: " + numberClients/1000+"Clients");
+            System.out.println("This Fond use: " + numberClients / 1000 + "Clients");
 
-        }else
+        } else
             System.out.println("This fond are use: " + numberClients);
     }
 }
