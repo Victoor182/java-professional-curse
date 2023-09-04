@@ -1,6 +1,8 @@
 package HomeWork.HomeWork1;
 
-public class Person {
+import java.util.Objects;
+
+public abstract class Person {
     private String name;
     private int age;
     private double height;
@@ -71,6 +73,36 @@ public class Person {
             System.out.println("Go work ");
         }
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Double.compare(person.height, height) == 0 && Double.compare(person.weight, weight) == 0 && money == person.money && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", money=" + money +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, height, weight, money);
+    }
+
+    public void dieIn(int Yers) {
+    }
+
+    public abstract void dieIn();
 
     public void die() {
         System.out.println("Person are Dead");

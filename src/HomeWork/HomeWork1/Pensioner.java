@@ -1,6 +1,8 @@
 package HomeWork.HomeWork1;
 
-public class Pensioner extends Person {
+import java.util.Objects;
+
+public abstract class Pensioner extends Person {
     private double pension;
 
 
@@ -10,6 +12,31 @@ public class Pensioner extends Person {
 
     public void setPension(double pension) {
         this.pension = pension;
+    }
+
+    @Override
+    public void dieIn(int years) {
+        System.out.println("Этот пенсионер умрет через" + years + "лет");
+    }
+
+    @Override
+    public String toString() {
+        return "Pensioner{" +
+                "pension=" + pension +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pensioner pensioner)) return false;
+        if (!super.equals(o)) return false;
+        return Double.compare(pensioner.pension, pension) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), pension);
     }
 
     @Override

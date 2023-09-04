@@ -1,7 +1,5 @@
 package LessonWork.Lesson1;
 
-import LessonWork.Lesson2.Cabriolet;
-
 public class Main {
     public static void main(String[] args) {
         Car a = new Car(1,"BMW F34","Black",0);

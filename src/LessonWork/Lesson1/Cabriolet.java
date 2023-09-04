@@ -1,4 +1,4 @@
-package LessonWork.Lesson2;
+package LessonWork.Lesson1;
 
 
 import LessonWork.Lesson1.Car;

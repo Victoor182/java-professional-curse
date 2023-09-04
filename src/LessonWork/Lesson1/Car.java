@@ -1,14 +1,16 @@
 package LessonWork.Lesson1;
 
-public class Car {
-    int id ;
-    String model ;
+import java.util.Objects;
 
-    String color ;
+public class Car {
+    int id;
+    String model;
+
+    String color;
 
     int currentSpeed;
 
-    private int cost ;
+    private int cost;
 
     public int getCost() {
         return cost;
@@ -41,9 +43,9 @@ public class Car {
     }
 
     public void setCurrentSpeed(int currentSpeed) {
-        if (currentSpeed >= 0 && currentSpeed < 500 ) {
+        if (currentSpeed >= 0 && currentSpeed < 500) {
             this.currentSpeed = currentSpeed;
-        }else
+        } else
             System.out.println("speed was no chenge ");
 
     }
@@ -56,10 +58,11 @@ public class Car {
         this.currentSpeed = currentSpeed;
     }
 
-    public void drift (){
+    public void drift() {
         System.out.println("super cool drift");
     }
-    public void info (){
+
+    public void info() {
         System.out.println();
         System.out.println("info auto");
         System.out.println("id nr = " + id);
@@ -67,18 +70,28 @@ public class Car {
         System.out.println("color auto = " + color);
         System.out.println();
     }
-    public void go(int speed){
+
+    public void go(int speed) {
         if (currentSpeed == 0) {
             System.out.println("auto was start with speed " + speed);
-        }
-        else {
+        } else {
             System.out.println("auto still go with " + speed);
         }
-        currentSpeed = speed ;
+        currentSpeed = speed;
 
     }
-    public void reuction(int a){
-        int b = cost - cost * a /100;
+
+    public void reuction(int a) {
+        int b = cost - cost * a / 100;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return id == car.id && currentSpeed == car.currentSpeed && cost == car.cost && Objects.equals(model, car.model) && Objects.equals(color, car.color);
+    }
+
 
 }
